@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+Shelter list
+{% block title %}
+  Shelter list
+{% endblock title %}
+
+{% block content %}
+  <h2>Shelter list</h2>
+  <div>Here is a list of the registerd shelters</div>
+  {% for shelter in shelters %}
+    <div>
+        <a href="{% url 'shelter_detail' shelter.id %}">
+            {{ shelter.name}}
+        </a>
+    </div>
+  {% endfor %}
+{% endblock content %}<h2>
